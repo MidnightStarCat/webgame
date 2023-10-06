@@ -1,42 +1,22 @@
 function init(self)
-	-- for DEBUG:
-	print(msg.url())
 end
 
 function on_message(self, message_id, message, sender)
 -- keyboard test
-	if action_id == hash("spacebar") then
-		if action.pressed then
-			--label.set_text("#PressSpace", tostring(self.disabled))
+	if message_id == hash("spacebar") then
 			label.set_text("#PressSpace", "spacebar pressed")
-
-		elseif action.released then
-			label.set_text("#PressSpace", "spacebar released")
-		end
 	end
 
-	if action_id == hash("help") then
-		if action.pressed then
-			--label.set_text("#PressSpace", tostring(self.disabled))
+	if message_id == hash("help") then
 			label.set_text("#PressSpace", "h pressed")
-
-		elseif action.released then
-			label.set_text("#PressSpace", "h released")
-		end
 	end
 	
 -- mouse test
-	if action_id == hash("left") then
-		if action.pressed then
+	if message_id == hash("left") then
 			label.set_text("#PressSpace", "left mouse clicked")
-		elseif action.released then
-		end
 	end
 
-	if action_id == hash("right") then
-		if action.pressed then
+	if message_id == hash("right") then
 			label.set_text("#PressSpace", "right mouse clicked")
-		elseif action.released then
-		end
 	end
 end
