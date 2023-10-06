@@ -1,0 +1,20 @@
+key_trigger {
+  input: KEY_SPACE
+  action: "spacebar"
+}
+key_trigger {
+  input: KEY_H
+  action: "help"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_LEFT
+  action: "left"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_RIGHT
+  action: "right"
+}
+text_trigger {
+  input: TEXT
+  action: "text"
+}

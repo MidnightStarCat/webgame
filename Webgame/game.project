@@ -1,0 +1,23 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[display]
+width = 1024
+height = 768
+
+[script]
+shared_state = 1
+
+[webmonetization]
+payment_pointer = YOUR_PAYMENT_POINTER
+
+[project]
+title = Webgame
+version = 0.0.1a
+publisher = MidnightStar
+developer = MidnightStar
+dependencies#0 = https://github.com/defold/extension-webmonetization/archive/master.zip
+
+[html5]
+cssfile = /builtins/manifests/web/dark_theme.css
+
