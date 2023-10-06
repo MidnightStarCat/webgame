@@ -1,22 +1,38 @@
 function init(self)
+	msg.post(".", "acquire_input_focus")
 end
 
-function on_message(self, message_id, message, sender)
+function on_input(self, action_id, action)
 -- keyboard test
-	if message_id == hash("spacebar") then
+	if action_id == hash("spacebar") then
+		if action.pressed then
 			label.set_text("#PressSpace", "spacebar pressed")
+		elseif action.released then
+			label.set_text("#PressSpace", "spacebar released")
+		end
 	end
 
-	if message_id == hash("help") then
+	if action_id == hash("help") then
+		if action.pressed then
 			label.set_text("#PressSpace", "h pressed")
+		elseif action.released then
+			label.set_text("#PressSpace", "h released")
+		end
 	end
-	
 -- mouse test
-	if message_id == hash("left") then
-			label.set_text("#PressSpace", "left mouse clicked")
+	if action_id == hash("left") then
+		if action.pressed then
+			label.set_text("#PressSpace", "mouse left pressed")
+		elseif action.released then
+			label.set_text("#PressSpace", "mouse left released")
+		end
 	end
 
-	if message_id == hash("right") then
-			label.set_text("#PressSpace", "right mouse clicked")
+	if action_id == hash("right") then
+		if action.pressed then
+			label.set_text("#PressSpace", "mouse right pressed")
+		elseif action.released then
+			label.set_text("#PressSpace", "mouse right released")
+		end
 	end
 end
