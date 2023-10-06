@@ -1,6 +1,8 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post("#TitleScreen", "load")
+	-- for DEBUG:
+	print(msg.url())
 end
 
 function on_message(self, message_id, message, sender)
@@ -11,5 +13,17 @@ function on_message(self, message_id, message, sender)
 	
 	if message_id == hash("spacebar") then
 		msg.post("TitleScreen:/go#TitleScreen", "spacebar")
+	end
+	
+	if message_id == hash("help") then
+		msg.post("TitleScreen:/go#TitleScreen", "help")
+	end
+
+	if message_id == hash("left") then
+		msg.post("TitleScreen:/go#TitleScreen", "left")
+	end
+
+	if message_id == hash("right") then
+		msg.post("TitleScreen:/go#TitleScreen", "right")
 	end
 end

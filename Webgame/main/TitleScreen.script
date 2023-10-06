@@ -1,3 +1,8 @@
+function init(self)
+	-- for DEBUG:
+	print(msg.url())
+end
+
 function on_message(self, message_id, message, sender)
 -- keyboard test
 	if action_id == hash("spacebar") then
