@@ -10,6 +10,16 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 
+	if action_id == hash("help") then
+		if action.pressed then
+			--label.set_text("#PressSpace", tostring(self.disabled))
+			label.set_text("#PressSpace", "h pressed")
+
+		elseif action.released then
+			label.set_text("#PressSpace", "h released")
+		end
+	end
+	
 -- mouse test
 	if action_id == hash("left") then
 		if action.pressed then

@@ -20,7 +20,7 @@ embedded_instances {
   "  }\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"openingscreen\"\n"
+  "  id: \"TitleScreen\"\n"
   "  type: \"collectionproxy\"\n"
   "  data: \"collection: \\\"/main/TitleScreen.collection\\\"\\n"
   "exclude: false\\n"
